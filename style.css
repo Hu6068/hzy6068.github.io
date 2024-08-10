@@ -31,17 +31,20 @@ footer{
 }
 
 aside{
-  width:100%;
-    padding-bottom:6em;
+  width:40%;
+  padding-top:1em;
+    padding-bottom:110px;
+  margin-right:1em;
   background-color:#f4f4f4;
     border:1px soild #ccc;
+  float:left;
 }
 margin-left: 1em;
         }
         .carousel-container {
             position: relative;
             width: 100%;
-            height: 200px;
+            height: 100%;
             overflow: hidden;
         }
         .carousel-inner {
@@ -65,7 +68,6 @@ ul{
 }
 section{
   border-width:2px;
-  background-color:#eee;
 }
 h2{
   font-family:serif;
