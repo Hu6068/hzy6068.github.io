@@ -31,7 +31,7 @@ footer{
 }
 
 aside{
-  width:40%;
+  width:55%;
   padding-top:1px;
     padding-bottom:1px;
   margin-right:1em;
@@ -59,13 +59,6 @@ margin-left: 1em;
 article{
   display:flex;
 }
-ul{
-  background-color:#3366FF;
-  font-family:serif;
-  text-align:justify;
-  text-align-last:left;
-  text-justify:inter-word;
-}
 section{
   border-width:2px;
 }
@@ -74,4 +67,7 @@ h2{
   }
 h3{
   text-align:center;
+}
+html{
+ width:770px;
 }
