@@ -12,9 +12,10 @@ nav{
   font-family:serif;
   }
 h1{
-  text-align:center;
+  text-align:right;
   font-size:32px;
   font-family:serif;
+ color:red;
 }
 div{
   color:black;
