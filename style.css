@@ -30,8 +30,8 @@ footer{
 }
 
 aside{
-  width:84%;
-    padding:3em;
+  width:100%;
+    padding-bottom:9em;
   background-color:#f4f4f4;
     border:1px soild #ccc;
 }
