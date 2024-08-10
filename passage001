@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<link rel="stylesheet"type="text/css">
+<meta charset="UTF-8">
+<meta name="viewport"content="width=device-width, initial-scale=1.0">
+<title>HZY个人网站</title>
+</head>
+<body>
+<header>
+<h1>B6068数据信息公开</h1>
+</header>
+<hr>
+<nav>
+<a href="#index">首页┃</a>
+<a href="#news";>要闻┃</a> 
+<a href="#plan">战略计划┃</a>
+<a href="#data">数据公开┃</a>
+<a href="#passage">时文选读</a>
+</nav>
+<body>
+<div id="container" style="width:100%">
+<div id="passage1">
+<h2 style="margin-bottom:0;">坚持付出，才有收获</h2></div>
+ <hr></hr>
+<div id="menu" style="background-color:#eee;height:100%;width:25%;float:right;">
+<b>其他阅读</b><br>
+ <a href="https://www.ccps.gov.cn/dxsy/202401/t20240104_160704.shtml">学习毛泽东同志的人格风范</a>
+<br>
+<a href="http://www.qstheory.cn/dukan/qs/2024-07/15/c_1130179374.htm">必须坚持自信自立</a>
+</div>
+ 
+<div id="content" style="height:100%;width:75%;float:left;text-align:left;">
+&nbsp&nbsp&nbsp&nbsp我坚持到巴黎奥运会了！这是我的第四次奥运之旅，能再次参加奥运会比赛，我很激动。作为中国体育代表团旗手之一参加开幕式，我感到无比自豪。
+<br>　　几十年来，中国乒乓球运动员接续奋斗，创造了许多佳绩。前辈们为中国乒乓球事业发展打下坚实基础，如今接力棒传到了我们手里，一定要更好地传承下去。</br>
+<br>　　上个奥运周期，我积极与伤病做斗争，即使再困难，也从未想过放弃。2019年，我连续第三次夺得世乒赛男单冠军；2021年，我在东京奥运会上蝉联男单冠军，实现“双圈大满贯”。我相信，坚持付出，才会有收获。</br>
+<br>　　进入巴黎奥运周期，世界男子乒坛竞争更趋激烈，我面临的挑战也越来越多。对乒乓球的热爱，一直激励我努力坚持。我喜欢打球，喜欢钻研，喜欢训练。我没放下球拍，也没有缺席任何一次队内封闭集训——要想保持较高的竞技水平，就必须保证高强度训练。</br>
+<br>　　2023年德班世乒赛，中国乒乓球队包揽男单四强，我在半决赛上输给了年轻的队友王楚钦。但我觉得自己仍具备较强的竞争力，希望继续前进，不留遗憾。2023年乒乓球亚锦赛，我时隔10年再次夺得男单冠军；2024年，我第三次捧得国际乒联男子世界杯冠军……一次次胜利让我增强了信心，鼓励我力争巴黎奥运会参赛资格。</br>
+<br>　　走下领奖台，一切从零开始。这就要求我们在训练时勇于创新、做足准备，在赛场上灵活应变、敢打敢拼、克服困难。奥运会是运动员展示竞技实力和运动风采的平台，巴黎奥运会上，我和队友一起参加乒乓球男子团体比赛，我将全力以赴。</br>
+<br>　　中国乒乓球队团结一心，不断取得佳绩、为国争光。我很高兴地看到，队伍中的年轻运动员逐渐挑起大梁，在国内外赛场展现青春风采。希望有更多人关注和喜爱乒乓球项目，享受运动乐趣，创造精彩未来！</br>
+　　（作者为中国乒乓球队运动员，本报记者孙龙飞采访整理）</div>
+ 
+<div id="footer" style="background-color:red;clear:both;text-align:center;color:white;">
+来源：人民日报&#8195引用时间：2024年8月10日11:02</div>
+ 
+</div>
+<div>
+<footer>
+<p>创建日期：2024年7月24日&nbsp &nbsp网站问题反馈通道:<a href="https://flowus.cn/form/1a7d0818-f058-48a5-86fb-53fd1dd47d38?code=YCDTPH";>点击进入</a></p>
+<p>&copy; 2024 B6068 Website. All rights reserved.</p>
+</footer>
+</div>
+</body>
+</html>
