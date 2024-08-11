@@ -55,6 +55,16 @@ margin-left: 1em;
             height: 100%;
             object-fit: cover;
         }
+.slides{
+ display:flex;
+ animation:slide 5s infinite;
+}
+@keyframes slide{
+ 0%{transform:translateX(0);}
+ 33.33%{transform:translateX(-100%);}
+ 66.66%{transform:translateX(-200%);}
+ 100%{transform:translateX(0);}
+}
 article{
   display:flex;
 }
