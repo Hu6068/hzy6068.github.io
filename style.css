@@ -32,7 +32,7 @@ footer{
 
 aside{
   width:60%;
-  height:190px;
+  height:220px;
   margin-right:1em;
   background-color:#f4f4f4;
     border:1px soild #ccc;
@@ -70,3 +70,6 @@ h3{
 html{
  width:790px;
 }
+ul{
+  line-height:30px;
+  }
