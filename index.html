@@ -4,7 +4,7 @@
 <link rel="stylesheet"type="text/css"href="style.css">
 <meta charset="UTF-8">
 <meta name="viewport"content="width=790px, initial-scale=1.0">
-<title>HZY个人网站</title>
+<title>行稳致远、笃行致远</title>
 </head>
   <h5 style="background-color:#FFFFCC;font-size:13px;border-width:1px;">本页面最小宽度为660px（像素）如若显示不全或者显示页面过小，请适当缩放浏览器显示大小（操作方法为：Windows系统下按住“Ctrl”键再按“+”，Mac系统下按住“command”键再按“+”，移动设备：双指缩放）。</h5>
 <body>
@@ -20,7 +20,7 @@
 <a href="#data">数据公开</a>
 <a href="#passage">时文选读</a>
 </nav>
-   <section class="countdown">
+  <section class="countdown">
    <div id="countdown">
      <h2>今天距第四次自检考试第二轮考试开始还有</h2>
         <p><span id="days"></span>天
@@ -30,18 +30,20 @@
     </div>
     </section>
     <script src="countdown.js"></script>
-<hr></hr>
 <h1 style="color:dodgerblue;text-align:center";><b>第33届夏季奥林匹克运动会在巴黎闭幕。中国体育代表团获40金27银24铜。</b></h1> 
   <hr></hr>
 <aside>
-<div class="carousel-container">
+<div class="carousel">
 <div class="carousel-inner">
-<img src="BE6D295208BF17E4B49245CC5DC42E06.jpg" alt="毛泽东思想永垂不朽！"style="width:100%;height:250px";>
+<img src="BE6D295208BF17E4B49245CC5DC42E06.jpg" alt="毛泽东思想永垂不朽！"style="width:100%;height:250px"class="slide active">
+<img src="IMG_20240811_090944.jpg" alt="自信自立"class="slide"></img>
 </div>
 </div>
+<script src="photo.js"></script>
 </aside>
 <main>
 <section class="news";>
+<div id="news"></div>
 <h2>要闻快讯</h2>
 <p>
 <ul>
@@ -54,12 +56,14 @@
 <div class="container1">
 <section class="plan">
 <h2>战略计划</h2>
+ <div id="plan"><div>
 <ul>
 <li>强理科行动</li>
 <li>高质量发展</li>
 </ul>
 </section>
 <section class="data">
+  <div id="data"></div>
 <h2>数据公开</h2>
 <h3><a href="https://flowus.cn/hzy6068/share/d272d7c4-9fbf-4dba-a84d-e001baac29a0?code=YCDTPH"target="_blank">学习数据</a>
 <a href="https://flowus.cn/hzy6068/share/abf3cd05-0ed2-4724-9db6-b51615f537ae?code=YCDTPH"target="_blank">健康数据</a>
@@ -67,8 +71,9 @@
 </h3>
 </section>
 <section class="passage">
+  <div id="passage"></div>
 <h2>时文选读</h2>
-  <a style="color:black;font-size:15px;text-align:left;"href="https://hu6068.github.io/hzy6068.github.io/passage001.html";><li>坚持付出，才会有收获——马龙</li></a>
+  <a href="https://hu6068.github.io/hzy6068.github.io/passage001.html";><li>坚持付出，才有收获——马龙</li></a>
 </section>
 </div>
 </main>
