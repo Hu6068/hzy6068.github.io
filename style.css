@@ -55,11 +55,16 @@ aside{
 }
 margin-left:1em;
         }
-        .carousel-container{
+.image-container {
   position:relative;
-  width:60%;
-  height:250px; 
-  overflow:hidden;
+  width:60%; /* 固定宽度 */
+  height:250px; /* 固定高度 */
+  overflow:hidden; /* 隐藏超出部分 */
+}
+.image {
+  width: 100%; /* 图片宽度与容器相同 */
+  height: 100%; /* 图片高度与容器相同 */
+  object-fit: cover; /* 保持宽高比并填充整个容器 */
 }
 article{
   display:flex;
