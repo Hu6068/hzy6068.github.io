@@ -17,7 +17,7 @@ nav a{
   margin-left:0.5em;
   margin-top:0em;
   margin-bottom:1em;
-  transition: background 1s; /* For modern browsers */
+  transition: background 2s; 
     }
     a:hover {
         background: #0066FF;
@@ -126,7 +126,7 @@ ul{
   color:black;
   font-size:15px;
   text-align:left;
-  transition: background 1s; /* For modern browsers */
+  transition: background 2s; 
     }
     a:hover {
         background: #E0E0E0;
@@ -149,7 +149,7 @@ ul{
   color:black;
   font-size:13px;
   text-align:left;
-   transition: font-size 1s; /* For modern browsers */
+   transition: font-size 2s;
     }
     a:hover {
       font-size:14px;
@@ -162,7 +162,7 @@ ul{
   position:absoluted;
   margin-top:1em;
   background-color:black;
-   transition: background 1s,color 1s; /* For modern browsers */
+   transition: background 2s,color 2s; 
     }
     a:hover {
         background: #E0E0E0;
