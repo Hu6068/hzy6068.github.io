@@ -19,7 +19,7 @@ nav a{
   margin-bottom:1em;
   transition: background 2s; 
     }
-    a:hover {
+    nav a:hover {
         background: #0066FF;
       padding-left:8px;
       padding-right:8px;
@@ -128,13 +128,12 @@ ul{
   text-align:left;
   transition: background 2s; 
     }
-    a:hover {
+ .data h3 a:hover {
         background: #E0E0E0;
       padding-left:8px;
       padding-right:8px;
       padding-top:5px;
-      padding-bottom:3px;
-      
+      padding-bottom:3px;  
 }
 .passage{
   float:right;
@@ -151,7 +150,7 @@ ul{
   text-align:left;
    transition: font-size 2s;
     }
-    a:hover {
+.passage a:hover {
       font-size:14px;
       padding-left:8px;
       padding-right:8px;
@@ -164,7 +163,7 @@ ul{
   background-color:black;
    transition: background 2s,color 2s; 
     }
-    a:hover {
+.footer1 a:hover {
         background: #E0E0E0;
       color:black;
       padding-left:8px;
