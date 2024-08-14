@@ -55,21 +55,11 @@ aside{
 }
 margin-left:1em;
         }
-        .carousel{
+        .carousel-container{
   position:relative;
   width:60%;
   height:250px; 
   overflow:hidden;
-  margin:20px auto;
-}
-.carousel-inner{
-  display:flex;
-  transition:transform 2s ease;
-}
-.slide{
-  width:100%;
-  height:100%;
-  object-fit:cover; 
 }
 article{
   display:flex;
