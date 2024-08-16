@@ -91,6 +91,17 @@ ul{
   margin-left:5px;
   overflow:scroll;
 }
+.news a{
+  font-size:16px;
+  color:black;
+  transition:color 2s; 
+    }
+ .news a:hover {
+      color:#0066FF;
+      padding-left:1px;
+      padding-top:1px;
+      padding-bottom:1px;  
+}
 .container1{
   position:relative;
   margin-top:1em;
