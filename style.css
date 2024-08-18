@@ -97,11 +97,11 @@ ul{
 .news a{
   font-size:16px;
   color:black;
-  transition:color 2s; 
+  transition:color 0.5s; 
     }
  .news a:hover {
       color:#0066FF;
-      padding-left:1px;
+      padding-left:2px;
       padding-top:1px;
       padding-bottom:1px;  
 }
@@ -136,14 +136,12 @@ ul{
   color:black;
   font-size:15px;
   text-align:left;
-  transition:background 2s; 
+  transition:background 0.5s; 
     }
  .data h3 a:hover {
        background:#E0E0E0;
-      padding-left:8px;
-      padding-right:8px;
-      padding-top:5px;
-      padding-bottom:3px;  
+      padding-left:2px;
+      padding-top:2px;  
 }
 .passage{
   float:right;
@@ -158,29 +156,26 @@ ul{
   color:black;
   font-size:13px;
   text-align:left;
-   transition:font-size 2s;
+   transition:font-size 0.5s;
     }
 .passage a:hover {
       font-size:14px;
-      padding-left:8px;
-      padding-right:8px;
-      padding-top:5px;
-      padding-bottom:3px
+      padding-left:2px;
+      padding-top:2px;
 }
 .footer1{
   position:relative;
   margin-top:1em;
   height:70px;
   background-color:black;
-   transition:background 2s,color 2s; 
+   transition:background 0.5s,color 0.5s; 
     }
 .footer1 a:hover {
         background:#E0E0E0;
       color:black;
-      padding-left:8px;
-      padding-right:8px;
-      padding-top:5px;
-      padding-bottom:3px
+      padding-left:2px;
+      padding-right:2px;
+      padding-bottom:2px
 }
 html{
   min-width:660px;
