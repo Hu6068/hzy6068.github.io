@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet"type="text/css"href="datachart.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>统计图表</title>
+<body>
+<header>
+<h1>贵在公开</h1>
+</header>
+<hr></hr>
+<nav>
+<a href="https://hu6068.github.io/hzy6068.github.io/">首页</a>
+<a href="#news">要闻快讯</a> 
+<a href="#plan">战略计划</a>
+<a href="#data">数据公开</a>
+<a href="#passage">时文选读</a>
+</nav>
+</body>
+    <!-- 引入 Chart.js 库 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body{font-family:Arial,sans-serif;}
+        button{margin:0px;}
+    </style>
+</head>
+<body>
+    <h2>2024年统计指标数据图表</h2>
+<hr>
+<div class="body">
+  <div class="button">
+    <!-- 定义两个按钮 -->
+    <button id="button1">知识产出</button>
+    <button id="button2">知识产出有效比例</button>
+    </div>
+    
+  <div class="container">
+    <!-- 定义一个 canvas 用于显示图表 -->
+    <canvas id="chartCanvas"width="520"height="300"></canvas>
+</div>
+ </div>
+    <script>
+        // 获取 canvas 元素
+        const chartCanvas=document.getElementById('chartCanvas');
+
+        // 定义图表数据
+        const chartData1={
+            labels:['一月','二月','三月','四月','五月'],
+            datasets:[{
+                label:'销售额',
+                data:[10, 20, 30, 25, 40],
+                backgroundColor:[
+                    'rgba(255,99,132,0.2)',
+                    'rgba(54,162,235,0.2)',
+                    'rgba(255,206,86,0.2)',
+                    'rgba(75,192,192,0.2)',
+                    'rgba(153,102,255,0.2)'
+                ],
+                borderColor:[
+                    'rgba(255,99,132,1)',
+                    'rgba(54,162,235,1)',
+                    'rgba(255,206,86,1)',
+                    'rgba(75,192,192,1)',
+                    'rgba(153,102,255,1)'
+                ],
+                borderWidth:1
+            }]
+        };
+
+        const chartData2={
+            labels:['一月','二月','三月','四月','五月'],
+            datasets:[{
+                label:'温度',
+                data:[20, 22, 25, 23, 27],
+                backgroundColor:[
+                    'rgba(255,99,132,0.2)',
+                    'rgba(54,162,235,0.2)',
+                    'rgba(255,206,86,0.2)',
+                    'rgba(75,192,192,0.2)',
+                    'rgba(153,102,255,0.2)'
+                ],
+                borderColor:[
+                    'rgba(255,99,132,1)',
+                    'rgba(54,162,235,1)',
+                    'rgba(255,206,86,1)',
+                    'rgba(75,192,192,1)',
+                    'rgba(153,102,255,1)'
+                ],
+                borderWidth:1
+            }]
+        };
+
+        // 初始化图表1
+        let myChart;
+
+        function createChart(data){
+            if (myChart){
+                myChart.destroy();
+            }
+            myChart=new Chart(chartCanvas,{
+                type:'bar',
+                data:data,
+                options:{
+                    scales:{
+                        y:{
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        // 获取按钮元素并添加点击事件监听器
+        const button1=document.getElementById('button1');
+        const button2=document.getElementById('button2');
+
+        button1.addEventListener('click', function(){
+            createChart(chartData1);
+        });
+
+        button2.addEventListener('click', function(){
+            createChart(chartData2);
+        });
+
+        // 默认显示图表1
+        createChart(chartData1);
+    </script>
+</body>
+<hr>
+<div class="footer1";style="background-color:#282828;font-size:15px;">
+  <h3 style="color:white";>友情链接</h3>
+  <a style="font-size:12px;"href="https://www.gov.cn/"target="_blank">中国政府网&#8195</a>
+  <a style="font-size:12px"href="http://www.guizhou.gov.cn/"target="_blank">贵州省人民政府&#8195</a>
+  <a style="font-size:12px"href="https://www.guiyang.gov.cn/"target="_blank">贵阳市人民政府&#8195</a>
+  <a style="font-size:12px"href="http://www.qstheory.cn/index.htm?f=pad"target="_blank">求是&#8195</a>
+  <a style="font-size:12px"href="https://www.ccps.gov.cn/"target="_blank">中央党校（国家行政学院）&#8195</a>
+  <a style="font-size:12px"href="https://www.gyyz.com.cn/"target="_blank">贵阳一中&#8195</a>
+  </div>
+<div>
+<footer>
+<p>创建日期：2024年7月24日&nbsp &nbsp网站问题反馈通道:<a href="https://flowus.cn/form/1a7d0818-f058-48a5-86fb-53fd1dd47d38?code=YCDTPH"target="_blank">点击进入</a></p>
+<p>&copy; 2024 B6068 Website. All rights reserved.</p>
+</footer>
+</div>
+</html>
