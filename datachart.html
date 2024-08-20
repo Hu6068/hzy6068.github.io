@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet"type="text/css"href="datachart.css">
+<link rel="stylesheet"type="text/css"href="datachart.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>统计图表</title>
@@ -33,6 +33,12 @@
     <!-- 定义两个按钮 -->
     <button id="button1">知识产出</button>
     <button id="button2">知识产出有效比例</button>
+<button id="button3">卡路里消耗</button>
+<button id="button4">中高强度锻炼时长</button>
+<button id="button5">步数</button>
+<button id="button6">睡眠</button>
+<button id="button7">志愿服务时长</button>
+<button id="button8">英语词汇量</button>
     </div>
     
   <div class="container">
@@ -88,6 +94,101 @@
                       }
                   ]
         };
+      const chartData3={
+            labels:['一月','二月','三月','四月','五月','六月','七月'],
+            datasets:[{
+                label:'2024年',
+                data:[9411,2268,12879,14048,17796,14439,10279],
+                backgroundColor: 'rgba(255,140,0,0.5)',           
+                borderColor:              'rgba(255,140,0,1)',
+                borderWidth:3     
+            },
+            {
+              label:'2023同期',
+              data:[8527,9904,21199,18402,10231,10938,11377],
+              backgroundColor:'rgba(190,190,190,0.5)',
+              borderColor:'rgba(190,190,190,1)',
+              borderWidth:3,
+            }
+                      ]
+        };
+  const chartData4={
+            labels:['一月','二月','三月','四月','五月','六月','七月'],
+            datasets:[{
+                label:'2024年',
+                data:[1443,323,1445,1653,1932,1517,579],
+                backgroundColor: 'rgba(0,191,255,0.5)',           
+                borderColor:              'rgba(0,191,255,1)',
+                borderWidth:3     
+            },
+            {
+              label:'2023年同期',
+              data:[534,664,1816,1119,698,584,967],
+              backgroundColor:'rgba(190,190,190,0.5)',
+              borderColor:'rgba(190,190,190,1)',
+              borderWidth:3,
+            }
+                      ]
+        };
+ const chartData5={
+            labels:['一月','二月','三月','四月','五月','六月','七月'],
+            datasets:[{
+                label:'2024年',
+                data:[294970,102475,321492,344561,396502,354571,274323],
+                backgroundColor: 'rgba(255,215,0,0.5)',           
+                borderColor:              'rgba(255,215,0,1)',
+                borderWidth:3     
+            },
+            {
+              label:'2023年同期',
+              data:[188961,220379,275122,266857,215752,171651,197275],
+              backgroundColor:'rgba(190,190,190,0.5)',
+              borderColor:'rgba(190,190,190,1)',
+              borderWidth:3,
+            }
+                      ]
+        };
+   const chartData6={
+            labels:['一月','二月','三月','四月','五月','六月','七月'],
+            datasets:[{
+                label:'2024年',
+                data:[6.6,6.6,6.6,6.5,6.9,6.4,6.0],
+                backgroundColor: 'rgba(138,43,226,0.5)',           
+                borderColor:              'rgba(139,43,226,1)',
+                borderWidth:3     
+            },
+            {
+              label:'2023年同期',
+              data:[6.6,6.2,7.0,6.0,6.0,4.5,8],
+              backgroundColor:'rgba(190,190,190,0.5)',
+              borderColor:'rgba(190,190,190,1)',
+              borderWidth:3,
+            }
+                      ]
+        };
+         
+     const chartData7={
+            labels:['一月','二月','三月','四月','五月','六月','七月'],
+            datasets:[{
+                label:'2024年',
+                data:[2.5,12.5,12.5,12.5,12.5,13.5,13.5],
+                backgroundColor: 'rgba(255,140,0,0.5)',           
+                borderColor:              'rgba(255,140,0,1)',
+                borderWidth:3, 
+               type:'line',
+            }]
+        };
+    const chartData8={
+            labels:['2023-12','2024-7'],
+            datasets:[{
+                label:'词汇量',
+                data:[4938,5902],
+                backgroundColor: 'rgba(255,140,0,0.5)',           
+                borderColor:              'rgba(255,140,0,1)',
+                borderWidth:3, 
+               type:'line',
+            }]
+        };
 
         // 初始化图表1
         let myChart;
@@ -112,6 +213,12 @@
         // 获取按钮元素并添加点击事件监听器
         const button1=document.getElementById('button1');
         const button2=document.getElementById('button2');
+      const button3=document.getElementById('button3');
+        const button4=document.getElementById('button4');
+      const button5=document.getElementById('button5');
+        const button6=document.getElementById('button6');
+      const button7=document.getElementById('button7');
+        const button8=document.getElementById('button8');
 
         button1.addEventListener('click', function(){
             createChart(chartData1);
@@ -120,7 +227,28 @@
         button2.addEventListener('click', function(){
             createChart(chartData2);
         });
+ button3.addEventListener('click', function(){
+            createChart(chartData3);
+        });
 
+        button4.addEventListener('click', function(){
+            createChart(chartData4);
+        });
+ button5.addEventListener('click', function(){
+            createChart(chartData5);
+        });
+
+        button6.addEventListener('click', function(){
+            createChart(chartData6);
+        });
+ button7.addEventListener('click', function(){
+            createChart(chartData7);
+        });
+
+ button8.addEventListener('click', function(){
+            createChart(chartData8);
+        });
+ 
         // 默认显示图表1
         createChart(chartData1);
     </script>
