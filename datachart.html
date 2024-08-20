@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet"type="text/css"href="datachart.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>统计图表</title>
@@ -37,7 +36,7 @@
     
   <div class="container">
     <!-- 定义一个 canvas 用于显示图表 -->
-    <canvas id="chartCanvas"width="520"height="300"></canvas>
+    <canvas id="chartCanvas"width="2560"height="1600"></canvas>
 </div>
  </div>
     <script>
@@ -46,49 +45,47 @@
 
         // 定义图表数据
         const chartData1={
-            labels:['一月','二月','三月','四月','五月'],
+            labels:['一月','二月','三月','四月','五月','六月','七月'],
             datasets:[{
-                label:'销售额',
-                data:[10, 20, 30, 25, 40],
-                backgroundColor:[
-                    'rgba(255,99,132,0.2)',
-                    'rgba(54,162,235,0.2)',
-                    'rgba(255,206,86,0.2)',
-                    'rgba(75,192,192,0.2)',
-                    'rgba(153,102,255,0.2)'
-                ],
-                borderColor:[
-                    'rgba(255,99,132,1)',
-                    'rgba(54,162,235,1)',
-                    'rgba(255,206,86,1)',
-                    'rgba(75,192,192,1)',
-                    'rgba(153,102,255,1)'
-                ],
-                borderWidth:1
-            }]
+                label:'产出总量',
+                data:[82,17,22,41,50,65,89],
+                backgroundColor: 'rgba(255,140,0,0.5)',           
+                borderColor:              'rgba(255,140,0,1)',
+                borderWidth:3     
+            },
+            {
+              label:'有效产出',
+              data:[52,15,18,34,43,52,85],
+              backgroundColor:'rgba(100,149,237,0.5)',
+              borderColor:'rgba(100,149,237,1)',
+              borderWidth:3,
+            }
+                      ]
         };
 
         const chartData2={
-            labels:['一月','二月','三月','四月','五月'],
+            labels:['一月','二月','三月','四月','五月','六月','七月'],
             datasets:[{
-                label:'温度',
-                data:[20, 22, 25, 23, 27],
-                backgroundColor:[
-                    'rgba(255,99,132,0.2)',
-                    'rgba(54,162,235,0.2)',
-                    'rgba(255,206,86,0.2)',
-                    'rgba(75,192,192,0.2)',
-                    'rgba(153,102,255,0.2)'
-                ],
-                borderColor:[
-                    'rgba(255,99,132,1)',
-                    'rgba(54,162,235,1)',
-                    'rgba(255,206,86,1)',
-                    'rgba(75,192,192,1)',
-                    'rgba(153,102,255,1)'
-                ],
-                borderWidth:1
-            }]
+                label:'比例',
+                data:[0.63,0.88,0.82,0.83,0.86,0.76,0.96],
+                backgroundColor:
+                    'rgba(54,100,139,0.5)',
+                borderColor:
+ 'rgba(54,100,139,1)',
+                borderWidth:3,
+              type:'line'
+            },
+              {
+                label:'控制线',
+                data:[0.8,0.8,0.8,0.8,0.8,0.8,0.8],
+                backgroundColor:'rgba(255,0,0,0.5)',
+                borderColor:'rgba(255,0,0,1)',
+                
+                borderWidth:1,
+                type:'line',
+                fill:true
+                      }
+                  ]
         };
 
         // 初始化图表1
