@@ -10,7 +10,7 @@ h2{
   text-align:center;
 }
 button{
-  width:120px;
+  width:100%;
   height:40px;
   background-color:#eee;
   font-size:14px;  
@@ -56,13 +56,13 @@ nav a{
 
 .button{
   float:left;
-  width:120px;
+  width:18%;
   height:300px;
   background-color:#eee;
 }
 .container{
   float:right;
-  width:520px;
+  width:78%;
   height:300px;
 }
 footer{
@@ -94,6 +94,6 @@ footer{
       padding-bottom:3px
 }
 html{
-  width:660px;
+  min-width:660px;
   background-color:white;
 }
