@@ -1,0 +1,98 @@
+.body{
+  height:350px;
+}
+header h1{
+ text-align:center;
+  font-family:serif;
+}
+h2{
+  font-size:25px;
+  text-align:center;
+}
+button{
+  width:120px;
+  height:40px;
+  background-color:#eee;
+  font-size:14px;  
+  border:0px;
+  transition:background 0.5s,color 0.5s
+}
+button:hover{
+  background:#003153;
+  color:white;
+  padding-left:1px;
+  padding-right:1px;
+  padding-bottom:1px;
+  padding-top:1px;
+}
+a{
+ text-decoration:none;
+  color:white;
+  text-align:center;
+  font-size:22px;
+}
+nav{
+  background-color:DodgerBlue;
+  text-align:center;
+  height:34px;
+  width:100%;
+  font-family:serif;
+  }
+nav a{
+  height:30px;
+  margin-right:0.5em;
+  margin-left:0.5em;
+  margin-top:0em;
+  margin-bottom:1em;
+  transition: background 2s; 
+    }
+   nav a:hover{
+      background: #0066FF;
+      padding-left:8px;
+      padding-right:8px;
+      padding-top:0px;
+      padding-bottom:2px;     
+}
+
+.button{
+  float:left;
+  width:120px;
+  height:300px;
+  background-color:#eee;
+}
+.container{
+  float:right;
+  width:520px;
+  height:300px;
+}
+footer{
+  position:relative;
+  background-color:black;
+  height:50px;
+  text-align:center;
+  color:white;
+  line-height:0.5;
+  padding:1em;
+  font-family:serif;
+}
+.footer1{
+  position:relative;
+  margin-top:1em;
+  height:70px;
+  text-align:center;
+  background-color:black;
+  }
+.footer1 a{
+   transition:background 0.5s,color 0.5s; 
+    }
+.footer1 a:hover {
+        background:#E0E0E0;
+      color:black;
+      padding-left:8px;
+      padding-right:8px;
+      padding-top:5px;
+      padding-bottom:3px
+}
+html{
+  width:660px;
+}
