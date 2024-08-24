@@ -1,33 +1,30 @@
-header{
- height:70px;
-}
-a{
+nav a{
  text-decoration:none;
-  color:white;
+  color:#524b48;
   text-align:center;
-  font-size:22px;
+  font-size:20px;
+  font-weight:700;
 }
 nav{
-  background-color:DodgerBlue;
-  text-align:center;
-  height:34px;
+  text-align:right;
+  height:32px;
   width:100%;
   font-family:serif;
   }
 nav a{
-  height:30px;
+  height:32px;
   margin-right:0.5em;
   margin-left:0.5em;
   margin-top:0em;
-  margin-bottom:1em;
-  transition: background 2s; 
+  margin-bottom:0em;
+  transition: font-size 0.5s; 
     }
    nav a:hover{
-      background: #0066FF;
-      padding-left:8px;
-      padding-right:8px;
-      padding-top:0px;
-      padding-bottom:2px;     
+      font-size:22px;
+      padding-left:3px;
+      padding-right:3px;
+      padding-top:5px;
+      padding-bottom:1px;     
 }
 h1{
   text-align:right;
@@ -48,33 +45,21 @@ footer{
   padding:1em;
   font-family:serif;
 }
-
-aside{
-  width:60%;
-  height:250px;
-  margin-right:0em;
-  background-color:#FFFFF0;
-    border:2px soild #f4f4f4;
-  float:left;
+footer a{
+  text-decoration:none;
+  color:white;
 }
-margin-left:1em;
-        }
 .image-container {
-  position:fixed;
-  width:60%; /* 固定宽度 */
+  position:relative;
+  width:100%; /* 固定宽度 */
   height:250px; /* 固定高度 */
+  margin-top:0.5em;
   overflow:hidden; /* 隐藏超出部分 */
 }
 .image {
   width: 100%; /* 图片宽度与容器相同 */
   height: 100%; /* 图片高度与容器相同 */
   object-fit: cover; /* 保持宽高比并填充整个容器 */
-}
-article{
-  display:flex;
-}
-section{
-  border-width:2px;
 }
 h2{
   font-family:serif;
@@ -86,22 +71,21 @@ ul{
   line-height:30px;
   }
 .news{
-  width:38%;
-  float:right;
+  width:100%;
+  position:relative;
   text-align:left;
   background-color:#f4f4f4;
   height:250px;
-  margin-left:5px;
   overflow:scroll;
 }
 .news a{
   font-size:16px;
   color:black;
-  transition:color 0.5s; 
+  transition:color 2s; 
     }
  .news a:hover {
       color:#0066FF;
-      padding-left:2px;
+      padding-left:1px;
       padding-top:1px;
       padding-bottom:1px;  
 }
@@ -109,24 +93,22 @@ ul{
   position:relative;
   margin-top:1em;
   width:100%;
-  height:250px;
+  height:650px;
   overflow:hidden;
 }
 .plan{
-  float:left;
   text-align:left;
   margin-left:0em;
-  margin-top:1em;
-  width:20%;
-  height:240px;
+  margin-top:0em;
+  width:100%;
+  height:200px;
   background-color:#f4f4f4;
   overflow:hidden;
 }
 .data{
-  float:left;
-  width:30%;
+  position:relative;
+  width:100%;
   text-align:left;
-  margin-left:1em;
   margin-top:1em;
   background-color:#f4f4f4;
   height:240px;
@@ -136,19 +118,20 @@ ul{
   color:black;
   font-size:15px;
   text-align:left;
-  transition:background 0.5s; 
+  transition:background 2s; 
     }
  .data h3 a:hover {
        background:#E0E0E0;
-      padding-left:2px;
-      padding-top:2px;  
+      padding-left:8px;
+      padding-right:8px;
+      padding-top:5px;
+      padding-bottom:3px;  
 }
 .passage{
-  float:right;
-  width:45%;
+  position:relative;
+  width:100%;
   margin-top:1em;
-  margin-left:1em;
-  height:240px;
+  height:140px;
   background-color:#f4f4f4;
   overflow:hidden;
   }
@@ -156,32 +139,43 @@ ul{
   color:black;
   font-size:13px;
   text-align:left;
-   transition:font-size 0.5s;
+   transition:font-size 2s;
     }
 .passage a:hover {
       font-size:14px;
-      padding-left:2px;
+      padding-left:8px;
+      padding-right:8px;
+      padding-top:5px;
+      padding-bottom:3px
+}
+.footer1 a{
+  color:white;
+  text-decoration:none;
+  margin-right:6px;
+  margin-right:6px;
 }
 .footer1{
   position:relative;
   margin-top:1em;
   height:70px;
   background-color:black;
-   transition:background 0.5s,color 0.5s; 
+   transition:background 2s,color 2s; 
     }
 .footer1 a:hover {
         background:#E0E0E0;
       color:black;
-      padding-left:2px;
-      padding-right:2px;
-      padding-bottom:2px
+      padding-left:8px;
+      padding-right:8px;
+      padding-top:5px;
+      padding-bottom:3px
 }
 html{
   min-width:660px;
+  max-width:790px;
 }
 .edge{
   width:100%;
-  height:500px;
+  height:1200px;
 }
 .countdown{
  width:100%;
@@ -207,4 +201,10 @@ html{
   font-weight:900;
   padding-right:15px;
   padding-left:15px;
+}
+hr{
+  height:2px;
+  background-color:#524b48;
+  width:100%;
+  border-width:0px;
 }
