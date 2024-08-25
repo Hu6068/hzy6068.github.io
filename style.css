@@ -52,8 +52,7 @@ footer a{
 .image-container {
   position:relative;
   width:100%; /* 固定宽度 */
-  height:400px; /* 固定高度 */
-  margin-top:0.5em;
+  height:250px; /* 固定高度 */
   overflow:hidden; /* 隐藏超出部分 */
 }
 .image {
@@ -74,13 +73,13 @@ ul{
   width:100%;
   position:relative;
   text-align:left;
-  background-color:#f4f4f4;
-  height:250px;
+  height:200px;
   overflow:scroll;
 }
 .news a{
   font-size:16px;
   color:black;
+  text-decoration:none;
   transition:color 2s; 
     }
  .news a:hover {
@@ -89,11 +88,24 @@ ul{
       padding-top:1px;
       padding-bottom:1px;  
 }
+.information{
+  text-align:left;
+  width:80%;
+  float:left;
+  line-height:30px;
+  margin-left:12px;
+}
+.date{
+  float:right;
+  width:15%;
+  line-height:30px;
+  color:#696969;
+}
 .container1{
   position:relative;
   margin-top:1em;
   width:100%;
-  height:700px;
+  height:450px;
   overflow:hidden;
 }
 .plan{
@@ -102,15 +114,34 @@ ul{
   margin-top:0em;
   width:100%;
   height:200px;
-  background-color:#f4f4f4;
+  overflow:hidden;
+}
+.qianglike{
+  float:left;
+  width:49%;
+}
+.qianglike img{
+  width:100%;
+  height:120px;
+  border:2px;
+  overflow:hidden;
+}
+.gaozhiliang{
+  float:right;
+  width:49%;
+}
+.gaozhiliang img{
+  width:100%;
+  height:120px;
+  border:2px;
   overflow:hidden;
 }
 .data{
+  float:left;
   position:relative;
-  width:100%;
+  width:49%;
   text-align:left;
-  margin-top:1em;
-  background-color:#f4f4f4;
+  margin-top:0em;
   height:240px;
   overflow:hidden;
 }
@@ -118,7 +149,11 @@ ul{
   color:black;
   font-size:15px;
   text-align:left;
-  transition:background 2s; 
+  border:2px;
+  text-decoration:none;
+  transition:background 2s;
+  margin-left:2px;
+  margin-right:2px;
     }
  .data h3 a:hover {
        background:#E0E0E0;
@@ -128,25 +163,22 @@ ul{
       padding-bottom:3px;  
 }
 .passage{
+  float:right;
   position:relative;
-  width:100%;
-  margin-top:1em;
-  height:140px;
-  background-color:#f4f4f4;
+  width:49%;
+  margin-top:0em;
+  height:240px;
   overflow:hidden;
   }
 .passage a{
   color:black;
   font-size:13px;
+  text-decoration:none;
   text-align:left;
-   transition:font-size 2s;
+   transition:font-size 1s;
     }
 .passage a:hover {
       font-size:14px;
-      padding-left:8px;
-      padding-right:8px;
-      padding-top:5px;
-      padding-bottom:3px
 }
 .footer1 a{
   color:white;
@@ -171,10 +203,6 @@ ul{
 }
 html{
   min-width:660px;
-}
-.edge{
-  width:100%;
-  height:1200px;
 }
 .countdown{
  width:100%;
@@ -206,4 +234,7 @@ hr{
   background-color:#524b48;
   width:100%;
   border-width:0px;
+}
+main hr{
+  height:1px;
 }
