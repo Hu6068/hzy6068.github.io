@@ -90,7 +90,7 @@ ul{
   transition:color 2s; 
     }
  .news a:hover {
-      color:#FFD700;
+      color:#FFB90F;
       padding-left:1px;
       padding-top:1px;
       padding-bottom:1px;  
@@ -234,7 +234,7 @@ ul{
 }
 .countdown p{
   font-size:20px;
-  color:#FFD700;
+  color:#FFB90F;
   text-align:center
 }
 .countdown span{
