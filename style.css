@@ -224,13 +224,13 @@ ul{
  height:120px;
  background-color:#eee;
   font-size:20px;
-  line-height:15px;
-  padding-top:0em;
+  line-height:12px;
+  margin-top:1em;
 }
 .countdown h2{
   font-size:20px;
   text-align:center;
-  padding-top:1em;
+  padding-top:0em;
 }
 .countdown p{
   font-size:20px;
