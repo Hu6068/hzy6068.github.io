@@ -169,7 +169,7 @@ ul{
   text-align:left;
   border:2px;
   text-decoration:none;
-  transition:background 2s;
+  transition:background-color 2s;
   margin-left:2px;
   margin-right:2px;
     }
@@ -234,12 +234,12 @@ ul{
 }
 .countdown p{
   font-size:20px;
-  color:#0099FF;
+  color:#FFD700;
   text-align:center
 }
 .countdown span{
   font-size:32px;
-  color:#0099FF;
+  color:#FFD700;
   font-weight:900;
   padding-right:15px;
   padding-left:15px;
