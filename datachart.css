@@ -57,7 +57,7 @@ button{
   background-color:#eee;
   font-size:14px;  
   border:0px;
-  transition:background 0.5s,color 0.5s
+  transition:background 0.5s,color 0.5s;
 }
 button:hover{
   background:#003153;
@@ -122,7 +122,7 @@ footer a{
       padding-left:8px;
       padding-right:8px;
       padding-top:5px;
-      padding-bottom:3px
+      padding-bottom:3px;
 }
 html{
   min-width:660px;
