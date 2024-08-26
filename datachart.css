@@ -1,6 +1,48 @@
+.zhiyuan{
+  float:left;
+  height:32px;
+  width:130px;
+  border:2px;
+  overflow:hidden;
+}
+nav a{
+ text-decoration:none;
+  color:#524b48;
+  text-align:center;
+  font-size:18px;
+  font-weight:700;
+}
+nav{
+  text-align:right;
+  height:32px;
+  width:100%;
+  font-family:serif;
+  }
+nav a{
+  height:32px;
+  margin-right:0.5em;
+  margin-left:0.5em;
+  margin-top:0em;
+  margin-bottom:0em;
+  transition: font-weight 0.5s; 
+    }
+   nav a:hover{
+      font-weight:300;
+      padding-left:3px;
+      padding-right:3px;
+      height:2px;
+      padding-bottom:13px;     
+}
+body hr{
+  height:2px;
+  background-color:#524b48;
+  width:100%;
+  border-width:0px;
+}
 .body{
   height:450px;
 }
+
 header h1{
  text-align:center;
   font-family:serif;
@@ -25,35 +67,6 @@ button:hover{
   padding-bottom:2px;
   padding-top:2px;
 }
-a{
- text-decoration:none;
-  color:white;
-  text-align:center;
-  font-size:22px;
-}
-nav{
-  background-color:DodgerBlue;
-  text-align:center;
-  height:34px;
-  width:100%;
-  font-family:serif;
-  }
-nav a{
-  height:30px;
-  margin-right:0.5em;
-  margin-left:0.5em;
-  margin-top:0em;
-  margin-bottom:1em;
-  transition: background 2s; 
-    }
-   nav a:hover{
-      background: #0066FF;
-      padding-left:8px;
-      padding-right:8px;
-      padding-top:5px;
-      padding-bottom:3px;     
-}
-
 .button{
   float:left;
   display:grid;
@@ -85,6 +98,10 @@ footer{
   padding:1em;
   font-family:serif;
 }
+footer a{
+  color:white;
+  text-decoration:none;
+}
 .footer1{
   position:relative;
   margin-top:1em;
@@ -93,6 +110,10 @@ footer{
   background-color:black;
   }
 .footer1 a{
+  margin-right:2px;
+  margin-left:2px;
+  color:white;
+  text-decoration:none;
    transition:background 0.5s,color 0.5s; 
     }
 .footer1 a:hover {
