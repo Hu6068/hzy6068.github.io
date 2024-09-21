@@ -1,5 +1,5 @@
 // 设置目标日期
-const targetDate = new Date("2024-08-29T12:00:00Z").getTime();
+const targetDate = new Date("2024-10-22T00:00:00Z").getTime();
 
 // 更新倒计时
 function updateCountdown() {
