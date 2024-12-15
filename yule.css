@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-    width: 100%;
+    width: 80%;
     margin: auto;
     overflow: hidden;
 }
@@ -68,9 +68,9 @@ footer {
     background: #d9edf7;
     text-align: center;
     padding: 10px;
-    position: fixed;
+    position: absoluted;
     bottom: 0;
-    width: 80%;
+    width: 100%;
 }
 
 footer p {
