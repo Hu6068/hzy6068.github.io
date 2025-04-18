@@ -1,107 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>月考成绩分析</title>
-    <link rel="stylesheet" href="gradeshow.css">
+    <title>成绩分析系统</title>
+    <link rel="stylesheet" href="grade.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-smoothlines@1.4.2"></script>
 </head>
-<body>
-    <div class="container">
-        <h1>成绩分析</h1>
+<body class="gov-style">
+    <header>
+        <h1>学生月考数据分析系统</h1>
+    </header>
 
-        <div class="chart-container">
-            <canvas id="totalScoreChart"></canvas>
+    <main>
+        <div class="module">
+            <h2 class="module-title">第一模块：分数分析</h2>
+            <div class="chart-container">
+                <canvas id="scoreChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="subjectChart"></canvas>
+            </div>
         </div>
 
-        <div class="chart-container">
-            <canvas id="subjectScoresChart"></canvas>
+        <div class="module">
+            <h2 class="module-title">第二模块：排名对比</h2>
+            <div class="chart-container">
+                <canvas id="totalRankChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="subjectRankChart"></canvas>
+            </div>
         </div>
+    </main>
 
-        <div class="table-container">
-            <table id="rankingsTable">
-                <tr>
-                    <th>考试名称</th>
-                    <th>总分班级排名</th>
-                    <th>总分年级排名</th>
-                    <th>语文班级排名</th>
-                    <th>数学班级排名</th>
-                    <th>英语班级排名</th>
-                    <th>物理班级排名</th>
-                    <th>化学班级排名</th>
-                    <th>生物班级排名</th>
-                </tr>
-            </table>
-        </div>
-    </div>
+    <footer>
+        <a href="data.html" class="gov-btn">数据管理</a>
+    </footer>
 
+    <script src="charts.js"></script>
+    <script src="utils.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const exams = JSON.parse(localStorage.getItem('exams')) || [];
-
-            // 生成总分趋势图
-            if (exams.length > 0) {
-                const ctxTotal = document.getElementById('totalScoreChart').getContext('2d');
-                new Chart(ctxTotal, {
-                    type: 'line',
-                    data: {
-                        labels: exams.map(e => e.examName),
-                        datasets: [{
-                            label: '总分趋势',
-                            data: exams.map(e => e.totalScore),
-                            borderColor: '#3e95cd',
-                            fill: false
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        scales: {
-                            x: { title: { display: true, text: '考试名称' } },
-                            y: { title: { display: true, text: '分数' } }
-                        }
-                    }
-                });
-            }
-
-            // 生成各科分数趋势图
-            const ctxSubject = document.getElementById('subjectScoresChart').getContext('2d');
-            new Chart(ctxSubject, {
-                type: 'line',
-                data: {
-                    labels: exams.map(e => e.examName),
-                    datasets: [
-                        { label: '语文', data: exams.map(e => e.Chinese), borderColor: '#ff6b6b' },
-                        { label: '数学', data: exams.map(e => e.Math), borderColor: '#4CAF50' },
-                        { label: '英语', data: exams.map(e => e.English), borderColor: '#2962ff' },
-                        { label: '物理', data: exams.map(e => e.Physics), borderColor: '#ff9800' },
-                        { label: '化学', data: exams.map(e => e.Chemistry), borderColor: '#e040fb' },
-                        { label: '生物', data: exams.map(e => e.Biology), borderColor: '#8bc34a' }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    scales: {
-                        x: { title: { display: true, text: '考试名称' } },
-                        y: { title: { display: true, text: '分数' } }
-                    }
-                }
-            });
-
-            // 生成排名表格
-            const table = document.getElementById('rankingsTable');
-            exams.forEach(exam => {
-                const row = table.insertRow();
-                row.innerHTML = `
-                    <td>${exam.examName}</td>
-                    <td>${exam.totalClassRank}</td>
-                    <td>${exam.totalGradeRank}</td>
-                    <td>${exam.ChineseRank}</td>
-                    <td>${exam.MathRank}</td>
-                    <td>${exam.EnglishRank}</td>
-                    <td>${exam.PhysicsRank}</td>
-                    <td>${exam.ChemistryRank}</td>
-                    <td>${exam.BiologyRank}</td>
-                `;
-            });
+        document.addEventListener('DOMContentLoaded', () => {
+            initScoreChart();
+            initSubjectChart();
+            initTotalRankChart();
+            initSubjectRankChart();
         });
     </script>
 </body>
