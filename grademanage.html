@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>成绩数据管理</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <div class="container">
+        <h1>成绩数据管理</h1>
+
+        <div class="form-container">
+            <form id="examForm">
+                <label>考试名称:</label>
+                <input type="text" id="examName" required><br>
+
+                <div>
+                    <label>分数输入:</label><br>
+                    <label>语文:</label> <input type="number" id="Chinese" required><br>
+                    <label>数学:</label> <input type="number" id="Math" required><br>
+                    <label>英语:</label> <input type="number" id="English" required><br>
+                    <label>物理:</label> <input type="number" id="Physics" required><br>
+                    <label>化学:</label> <input type="number" id="Chemistry" required><br>
+                    <label>生物:</label> <input type="number" id="Biology" required><br>
+                </div>
+
+                <div>
+                    <label>总分:</label> <input type="number" id="totalScore" required><br>
+                </div>
+
+                <div>
+                    <label>排名输入:</label><br>
+                    <label>总分班级排名:</label> <input type="number" id="totalClassRank" required><br>
+                    <label>总分年级排名:</label> <input type="number" id="totalGradeRank" required><br>
+                </div>
+
+                <div>
+                    <label>各科班级排名:</label><br>
+                    <label>语文排名:</label> <input type="number" id="ChineseRank" required><br>
+                    <label>数学排名:</label> <input type="number" id="MathRank" required><br>
+                    <label>英语排名:</label> <input type="number" id="EnglishRank" required><br>
+                    <label>物理排名:</label> <input type="number" id="PhysicsRank" required><br>
+                    <label>化学排名:</label> <input type="number" id="ChemistryRank" required><br>
+                    <label>生物排名:</label> <input type="number" id="BiologyRank" required><br>
+                </div>
+
+                <button type="submit">添加考试数据</button>
+            </form>
+        </div>
+
+        <div class="table-container">
+            <table id="examsTable">
+                <tr>
+                    <th>考试名称</th>
+                    <th>操作</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const examsTable = document.getElementById('examsTable');
+            const form = document.getElementById('examForm');
+
+            // 初始化表格数据
+            const loadExams = () => {
+                const exams = JSON.parse(localStorage.getItem('exams')) || [];
+                examsTable.innerHTML = `
+                    <tr>
+                        <th>考试名称</th>
+                        <th>操作</th>
+                    </tr>
+                `;
+
+                exams.forEach(exam => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${exam.examName}</td>
+                        <td><button class="delete" data-name="${exam.examName}">删除</button></td>
+                    `;
+                    examsTable.appendChild(row);
+                });
+            };
+            loadExams();
+
+            // 删除功能
+            examsTable.addEventListener('click', function (e) {
+                if (e.target.classList.contains('delete')) {
+                    const examName = e.target.dataset.name;
+                    const exams = JSON.parse(localStorage.getItem('exams')) || [];
+                    const filteredExams = exams.filter(exam => exam.examName !== examName);
+                    localStorage.setItem('exams', JSON.stringify(filteredExams));
+                    loadExams();
+                }
+            });
+
+            // 表单提交
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const formData = {
+                    examName: document.getElementById('examName').value.trim(),
+                    Chinese: parseFloat(document.getElementById('Chinese').value),
+                    Math: parseFloat(document.getElementById('Math').value),
+                    English: parseFloat(document.getElementById('English').value),
+                    Physics: parseFloat(document.getElementById('Physics').value),
+                    Chemistry: parseFloat(document.getElementById('Chemistry').value),
+                    Biology: parseFloat(document.getElementById('Biology').value),
+                    totalScore: parseFloat(document.getElementById('totalScore').value),
+                    totalClassRank: parseInt(document.getElementById('totalClassRank').value),
+                    totalGradeRank: parseInt(document.getElementById('totalGradeRank').value),
+                    ChineseRank: parseInt(document.getElementById('ChineseRank').value),
+                    MathRank: parseInt(document.getElementById('MathRank').value),
+                    EnglishRank: parseInt(document.getElementById('EnglishRank').value),
+                    PhysicsRank: parseInt(document.getElementById('PhysicsRank').value),
+                    ChemistryRank: parseInt(document.getElementById('ChemistryRank').value),
+                    BiologyRank: parseInt(document.getElementById('BiologyRank').value),
+                };
+
+                if (formData.examName === '') {
+                    alert('考试名称不能为空');
+                    return;
+                }
+
+                let exams = JSON.parse(localStorage.getItem('exams')) || [];
+                exams.push(formData);
+                localStorage.setItem('exams', JSON.stringify(exams));
+                form.reset();
+                loadExams();
+            });
+        });
+    </script>
+</body>
+</html>
