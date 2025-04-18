@@ -1,113 +1,108 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>学业跟踪系统</title>
-    <link rel="stylesheet" href="gradeshow.css">
+    <title>月考成绩分析</title>
+    <link rel="stylesheet" href="common.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>学业跟踪系统</h1>
-        </header>
+        <h1>成绩分析</h1>
 
-        <!-- 折线图容器 -->
         <div class="chart-container">
-            <div class="chart-box">
-                <h2>总分趋势图</h2>
-                <canvas id="totalScoreChart"></canvas>
-            </div>
-            <div class="chart-box">
-                <h2>各科分数趋势图</h2>
-                <canvas id="subjectScoreChart"></canvas>
-            </div>
+            <canvas id="totalScoreChart"></canvas>
         </div>
 
-        <!-- 数据表格 -->
+        <div class="chart-container">
+            <canvas id="subjectScoresChart"></canvas>
+        </div>
+
         <div class="table-container">
-            <table id="scoreTable">
-                <thead>
-                    <tr>
-                        <th>考试日期</th>
-                        <th>语文</th>
-                        <th>数学</th>
-                        <th>英语</th>
-                        <th>物理</th>
-                        <th>化学</th>
-                        <th>生物</th>
-                        <th>总分</th>
-                        <th>总分班级排名</th>
-                        <th>总分年级排名</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
+            <table id="rankingsTable">
+                <tr>
+                    <th>考试名称</th>
+                    <th>总分班级排名</th>
+                    <th>总分年级排名</th>
+                    <th>语文班级排名</th>
+                    <th>数学班级排名</th>
+                    <th>英语班级排名</th>
+                    <th>物理班级排名</th>
+                    <th>化学班级排名</th>
+                    <th>生物班级排名</th>
+                </tr>
             </table>
-        </div>
-
-        <!-- 数据添加表单 -->
-        <div class="form-container">
-            <h2>添加成绩数据</h2>
-            <form id="addScoreForm">
-                <div class="form-row">
-                    <label>考试日期：</label>
-                    <input type="date" id="examDate" required>
-                </div>
-                
-                <!-- 各科分数输入 -->
-                <div class="form-row">
-                    <div class="subject-input">
-                        <label>语文分数：</label>
-                        <input type="number" min="0" max="150" id="chineseScore" required>
-                    </div>
-                    <div class="subject-input">
-                        <label>数学分数：</label>
-                        <input type="number" min="0" max="150" id="mathScore" required>
-                    </div>
-                </div>
-                
-                <!-- 其他科目 -->
-                <div class="form-row">
-                    <div class="subject-input">
-                        <label>英语分数：</label>
-                        <input type="number" min="0" max="150" id="englishScore" required>
-                    </div>
-                    <div class="subject-input">
-                        <label>物理分数：</label>
-                        <input type="number" min="0" max="100" id="physicsScore" required>
-                    </div>
-                </div>
-                
-                <!-- 继续其他科目 -->
-                <div class="form-row">
-                    <div class="subject-input">
-                        <label>化学分数：</label>
-                        <input type="number" min="0" max="100" id="chemistryScore" required>
-                    </div>
-                    <div class="subject-input">
-                        <label>生物分数：</label>
-                        <input type="number" min="0" max="100" id="biologyScore" required>
-                    </div>
-                </div>
-
-                <!-- 排名输入 -->
-                <div class="form-row">
-                    <div class="ranking-input">
-                        <label>总分班级排名：</label>
-                        <input type="number" min="1" id="classRank" required>
-                    </div>
-                    <div class="ranking-input">
-                        <label>总分年级排名：</label>
-                        <input type="number" min="1" id="gradeRank" required>
-                    </div>
-                </div>
-
-                <button type="submit">添加数据</button>
-            </form>
         </div>
     </div>
 
-    <script src="gradeshow.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const exams = JSON.parse(localStorage.getItem('exams')) || [];
+
+            // 生成总分趋势图
+            if (exams.length > 0) {
+                const ctxTotal = document.getElementById('totalScoreChart').getContext('2d');
+                new Chart(ctxTotal, {
+                    type: 'line',
+                    data: {
+                        labels: exams.map(e => e.examName),
+                        datasets: [{
+                            label: '总分趋势',
+                            data: exams.map(e => e.totalScore),
+                            borderColor: '#3e95cd',
+                            fill: false
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            x: { title: { display: true, text: '考试名称' } },
+                            y: { title: { display: true, text: '分数' } }
+                        }
+                    }
+                });
+            }
+
+            // 生成各科分数趋势图
+            const ctxSubject = document.getElementById('subjectScoresChart').getContext('2d');
+            new Chart(ctxSubject, {
+                type: 'line',
+                data: {
+                    labels: exams.map(e => e.examName),
+                    datasets: [
+                        { label: '语文', data: exams.map(e => e.Chinese), borderColor: '#ff6b6b' },
+                        { label: '数学', data: exams.map(e => e.Math), borderColor: '#4CAF50' },
+                        { label: '英语', data: exams.map(e => e.English), borderColor: '#2962ff' },
+                        { label: '物理', data: exams.map(e => e.Physics), borderColor: '#ff9800' },
+                        { label: '化学', data: exams.map(e => e.Chemistry), borderColor: '#e040fb' },
+                        { label: '生物', data: exams.map(e => e.Biology), borderColor: '#8bc34a' }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        x: { title: { display: true, text: '考试名称' } },
+                        y: { title: { display: true, text: '分数' } }
+                    }
+                }
+            });
+
+            // 生成排名表格
+            const table = document.getElementById('rankingsTable');
+            exams.forEach(exam => {
+                const row = table.insertRow();
+                row.innerHTML = `
+                    <td>${exam.examName}</td>
+                    <td>${exam.totalClassRank}</td>
+                    <td>${exam.totalGradeRank}</td>
+                    <td>${exam.ChineseRank}</td>
+                    <td>${exam.MathRank}</td>
+                    <td>${exam.EnglishRank}</td>
+                    <td>${exam.PhysicsRank}</td>
+                    <td>${exam.ChemistryRank}</td>
+                    <td>${exam.BiologyRank}</td>
+                `;
+            });
+        });
+    </script>
 </body>
 </html>
