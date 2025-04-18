@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学业跟踪系统</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>学业跟踪系统</h1>
+        </header>
+
+        <!-- 折线图容器 -->
+        <div class="chart-container">
+            <div class="chart-box">
+                <h2>总分趋势图</h2>
+                <canvas id="totalScoreChart"></canvas>
+            </div>
+            <div class="chart-box">
+                <h2>各科分数趋势图</h2>
+                <canvas id="subjectScoreChart"></canvas>
+            </div>
+        </div>
+
+        <!-- 数据表格 -->
+        <div class="table-container">
+            <table id="scoreTable">
+                <thead>
+                    <tr>
+                        <th>考试日期</th>
+                        <th>语文</th>
+                        <th>数学</th>
+                        <th>英语</th>
+                        <th>物理</th>
+                        <th>化学</th>
+                        <th>生物</th>
+                        <th>总分</th>
+                        <th>总分班级排名</th>
+                        <th>总分年级排名</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- 数据添加表单 -->
+        <div class="form-container">
+            <h2>添加成绩数据</h2>
+            <form id="addScoreForm">
+                <div class="form-row">
+                    <label>考试日期：</label>
+                    <input type="date" id="examDate" required>
+                </div>
+                
+                <!-- 各科分数输入 -->
+                <div class="form-row">
+                    <div class="subject-input">
+                        <label>语文分数：</label>
+                        <input type="number" min="0" max="150" id="chineseScore" required>
+                    </div>
+                    <div class="subject-input">
+                        <label>数学分数：</label>
+                        <input type="number" min="0" max="150" id="mathScore" required>
+                    </div>
+                </div>
+                
+                <!-- 其他科目 -->
+                <div class="form-row">
+                    <div class="subject-input">
+                        <label>英语分数：</label>
+                        <input type="number" min="0" max="150" id="englishScore" required>
+                    </div>
+                    <div class="subject-input">
+                        <label>物理分数：</label>
+                        <input type="number" min="0" max="100" id="physicsScore" required>
+                    </div>
+                </div>
+                
+                <!-- 继续其他科目 -->
+                <div class="form-row">
+                    <div class="subject-input">
+                        <label>化学分数：</label>
+                        <input type="number" min="0" max="100" id="chemistryScore" required>
+                    </div>
+                    <div class="subject-input">
+                        <label>生物分数：</label>
+                        <input type="number" min="0" max="100" id="biologyScore" required>
+                    </div>
+                </div>
+
+                <!-- 排名输入 -->
+                <div class="form-row">
+                    <div class="ranking-input">
+                        <label>总分班级排名：</label>
+                        <input type="number" min="1" id="classRank" required>
+                    </div>
+                    <div class="ranking-input">
+                        <label>总分年级排名：</label>
+                        <input type="number" min="1" id="gradeRank" required>
+                    </div>
+                </div>
+
+                <button type="submit">添加数据</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
